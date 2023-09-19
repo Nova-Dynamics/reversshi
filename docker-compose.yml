@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  reverssi-server:
+    build: .
+    ports:
+      - "$REVERSSHI_PORT:22"
+      - "$REVERSSHI_FORWARD_PORT:2223"
+    env_file: ./.env
